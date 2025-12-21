@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ur Wardrobe | Shop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: black;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: whitesmoke;
+            font-style: oblique;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            font-weight: bold;
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 8px;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* SHOP SECTION */
+        .shop {
+            margin: 30px;
+            padding: 30px;
+            background: gray;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .shop h1 {
+            text-align: center;
+            font-size: 48px;
+            color: darkred;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 5px lightgrey;
+        }
+
+        .shop p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        /* PRODUCT CARD */
+        .product {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 220px;
+            height: 220px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: darkred;
+            font-weight: bold;
+        }
+
+        .old-price {
+            font-size: 14px;
+            color: #777;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        .product button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            border: none;
+            background-color: darkred;
+            color: white;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .product button:hover {
+            background-color: black;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header>
+        <nav>
+            <h2><i>Ur Wardrobe</i></h2>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SHOP -->
+    <section class="shop">
+        <h1>Shop Collection</h1>
+        <p><i>Premium fashion at unbeatable prices</i></p>
+
+        <div class="product-grid">
+
+            <!-- FOOTWEAR -->
+            <div class="product">
+                <img src="sneakers.png">
+                <h3>Sneakers</h3>
+                <p class="price">Rs. 4,500 <span class="old-price">Rs. 9,000</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="sneaker2.png">
+                <h3>Sneakers Pro</h3>
+                <p class="price">Rs. 4,800 <span class="old-price">Rs. 9,600</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="boots.png">
+                <h3>Boots</h3>
+                <p class="price">Rs. 5,200 <span class="old-price">Rs. 10,400</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="sandel.png">
+                <h3>Sandals</h3>
+                <p class="price">Rs. 2,200 <span class="old-price">Rs. 4,400</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- CLOTHING -->
+            <div class="product">
+                <img src="denim.png">
+                <h3>Denim Jacket</h3>
+                <p class="price">Rs. 3,800 <span class="old-price">Rs. 7,600</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="hoodie.png">
+                <h3>Hoodie</h3>
+                <p class="price">Rs. 2,900 <span class="old-price">Rs. 5,800</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="jeans.png">
+                <h3>Jeans</h3>
+                <p class="price">Rs. 2,700 <span class="old-price">Rs. 5,400</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="shorts.png">
+                <h3>Shorts</h3>
+                <p class="price">Rs. 1,900 <span class="old-price">Rs. 3,800</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="blouse.png">
+                <h3>Blouse</h3>
+                <p class="price">Rs. 2,500 <span class="old-price">Rs. 5,000</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="coat.png">
+                <h3>Coat</h3>
+                <p class="price">Rs. 6,500 <span class="old-price">Rs. 13,000</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- ACCESSORIES -->
+            <div class="product">
+                <img src="watch.png">
+                <h3>Watch</h3>
+                <p class="price">Rs. 6,200 <span class="old-price">Rs. 12,400</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="bag.png">
+                <h3>Bag</h3>
+                <p class="price">Rs. 3,200 <span class="old-price">Rs. 6,400</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="belt.png">
+                <h3>Belt</h3>
+                <p class="price">Rs. 1,500 <span class="old-price">Rs. 3,000</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="hat.png">
+                <h3>Hat</h3>
+                <p class="price">Rs. 1,300 <span class="old-price">Rs. 2,600</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="scarf.png">
+                <h3>Scarf</h3>
+                <p class="price">Rs. 1,400 <span class="old-price">Rs. 2,800</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="sunglasses.png">
+                <h3>Sunglasses</h3>
+                <p class="price">Rs. 2,600 <span class="old-price">Rs. 5,200</span></p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Abdul Wahab Shaikh | All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>

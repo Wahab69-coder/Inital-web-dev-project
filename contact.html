@@ -1,33 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
-<body>
-     <a href="index.html">Home</a>
-    <a href="career.html">Career</a>
-    <a href="contact.html">Contact</a>
-    <a href="about.html">About us</a>
-    <h1>Contact Page </h1>
+    <title>Contact | Ur Wardrobe</title>
 
-    <img src="contact_pic.jpg" alt="contact's Picture" height="200px" width="200px" align="right">
-    <p>If you have any questions or would like to get in touch, please feel free to reach out to me through the contact information below or by filling out the contact form.</p>
-    <h2>Contact Information</h2>
-    <p>Email: <a href="mailto:abdulwahab292k5@gmail.com">abdulwahab292k5@gmail.com</a></p>  
-    <h2>Contact Form</h2>
-    <form>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="message">Message:</label><br>
-        <textarea placeholder="Write your message here..." rows="6" id="message" name="message" rows="6" required></textarea><br><br>
-        
-        <button type="submit">Submit</button>
-    </form>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f2f2f2;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: black;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: whitesmoke;
+            font-style: oblique;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            font-weight: bold;
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 6px;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .contact-container h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        .contact-container p {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #555;
+        }
+
+        .contact-box {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* INFO CARD */
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+            background: gray;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: black;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: black;
+            line-height: 1.6;
+        }
+
+        /* FORM CARD */
+        .contact-form {
+            flex: 1;
+            min-width: 280px;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: black;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 14px;
+            background-color: black;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .contact-form button:hover {
+            background-color: #222;
+            transform: translateY(-2px);
+        }
+
+        /* NOTE */
+        .contact-note {
+            text-align: center;
+            margin-top: 50px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav div a {
+                margin-left: 12px;
+            }
+
+            
+        }
+        .contact-container h1 {
+                font-size: 48px;
+                color: darkred;
+                text-shadow: 4px 4px 5px lightgrey;
+            }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2><i>Ur Wardrobe</i></h2>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="products.html">Shop</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact-container">
+        <h1><i>📞Contact Us</i></h1>
+        <p>We'd love to hear from you. Reach out anytime.</p>
+
+        <div class="contact-box">
+
+            <div class="contact-info">
+                <h3>📍 Reach Us</h3>
+                <p><strong>Email:</strong> support@urwardrobe.com</p>
+                <p><strong>Phone:</strong> +92 300 1234567</p>
+                <p><strong>Address:</strong> Karachi, Pakistan</p>
+                <p>🕒 Mon – Sat | 10 AM – 8 PM</p>
+            </div>
+
+            <div class="contact-form">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject">
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="contact-note">
+            <p>We usually respond within 24 hours ❤️</p>
+        </div>
+    </section>
+
 </body>
+
 </html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blogs | Ur Wardrobe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: black;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      color: whitesmoke;
+      font-style: oblique;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      font-weight: bold;
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 6px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: white;
+      transition: 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a.active {
+      color: red;
+    }
+
+    nav a.active::after {
+      width: 100%;
+      background-color: red;
+    }
+
+    /* BLOGS CONTAINER */
+    .blogs-container {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .blogs-container h1 {
+      text-align: center;
+      font-size: 36px;
+      color: darkred;
+      text-shadow: 3px 3px 6px lightgrey;
+      margin-bottom: 50px;
+    }
+
+    /* BLOG GRID */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+      gap: 30px;
+    }
+
+    /* SINGLE BLOG CARD */
+    .blog-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .blog-image {
+      width: 100%;
+      height: 180px;
+      background-color: #ddd;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .blog-title {
+      font-size: 22px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .blog-summary {
+      flex-grow: 1;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .read-more {
+      text-decoration: none;
+      font-weight: bold;
+      color: darkred;
+      transition: color 0.3s ease;
+    }
+
+    .read-more:hover {
+      color: black;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      nav div a {
+        margin-left: 12px;
+      }
+      
+    }
+    .blogs-container h1 {
+        font-size: 48px;
+        color: darkred;
+        text-shadow: 4px 4px 5px lightgrey;
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2><i>Ur Wardrobe</i></h2>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="blogs.html" >Blogs</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="blogs-container">
+    <h1><i>Our Latest Blogs</i></h1>
+    <div class="blog-grid">
+
+      <article class="blog-card">
+        <div class="blog-image" style="background-image: url('https://via.placeholder.com/400x180?text=Fashion+Tips');"></div>
+        <div class="blog-content">
+          <h2 class="blog-title">Top 10 Fashion Tips for 2025</h2>
+          <p class="blog-summary">
+            Discover the hottest fashion trends for 2025 and how to style them effortlessly.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-image" style="background-image: url('https://via.placeholder.com/400x180?text=Winter+Collection');"></div>
+        <div class="blog-content">
+          <h2 class="blog-title">Winter Collection Launch: What to Expect</h2>
+          <p class="blog-summary">
+            A sneak peek into our upcoming winter collection with cozy and stylish options.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-image" style="background-image: url('https://via.placeholder.com/400x180?text=Style+Advice');"></div>
+        <div class="blog-content">
+          <h2 class="blog-title">How to Accessorize Like a Pro</h2>
+          <p class="blog-summary">
+            Tips and tricks to elevate your outfits using the perfect accessories.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</body>
+</html>
