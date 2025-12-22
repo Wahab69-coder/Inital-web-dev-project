@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background: gray;
+            padding: 30px 30px;
+            width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        label {
+            font-weight: bold;
+            color: black;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 6px;
+            border: 1px solid black;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #007bff;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .gender {
+            margin-top: 8px;
+        }
+
+        .gender label {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1><i>Student Registration Form</i></h1>
+
+        <form action="/submit_registration" method="post">
+
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+
+            <label>Father Name</label>
+            <input type="text" name="father_name" required>
+
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+
+            <label>Date of Birth</label>
+            <input type="date" name="dob" required>
+
+            <label>Gender</label>
+            <div class="gender">
+                <input type="radio" name="gender" value="male" required> Male<br>
+                <input type="radio" name="gender" value="female"> Female<br>
+                <input type="radio" name="gender" value="other"> Other
+            </div>
+
+            <label>Address</label>
+            <textarea name="address" rows="4" required></textarea>
+
+            <label>Select Course</label>
+            <select name="course" required>
+                <option value="computer_science">Computer Science</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="physics">Physics</option>
+                <option value="chemistry">Chemistry</option>
+            </select>
+
+            <input type="submit" value="Register">
+
+        </form>
+    </div>
+
+</body>
+</html>
